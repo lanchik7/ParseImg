@@ -21,7 +21,7 @@ jobs:
       - name: Install Dependencies # Установка зависимостей для Jupyter
         run: pip install -r requirements.txt
       - name: Install nbconvert # Установка зависимостей для Jupyter
-        run: pip install nbconvert
+        run: pip install nbconvert python3 -m pip install ipykernel python3 -m ipykernel install --user
       - name: Exeute Notebook # Выполнение тетрадки Jupyter
         run: jupyter-nbconvert --execute ParseImage.ipynb --to html
       - name: Upload a Build Artifact # Выгрузка вывода тетрадки (артефакта задания) в html файл
