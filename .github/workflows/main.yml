@@ -19,7 +19,7 @@ jobs:
           cache: pip
           python-version: '3.7'
       - name: Install Dependencies # Установка зависимостей для Jupyter
-        run: pip install nbconvert
+        run: pip install tqdm==4.23.4
       - name: Exeute Notebook # Выполнение тетрадки Jupyter
         run: jupyter-nbconvert --execute Parse Image.ipynb --to html
       - name: Upload a Build Artifact # Выгрузка вывода тетрадки (артефакта задания) в html файл
