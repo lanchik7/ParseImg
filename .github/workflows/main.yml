@@ -23,7 +23,7 @@ jobs:
       - name: Install nbconvert # Установка зависимостей для Jupyter
         run: pip install nbconvert
       - name: Exeute Notebook # Выполнение тетрадки Jupyter
-        run: jupyter-nbconvert --execute Parse Image.ipynb --to html
+        run: jupyter-nbconvert --execute ParseImage.ipynb --to html
       - name: Upload a Build Artifact # Выгрузка вывода тетрадки (артефакта задания) в html файл
         uses: actions/upload-artifact@v3.1.0
         with:
